@@ -37,10 +37,10 @@ for member in members:
     url = 'https://api.twitch.tv/helix/streams'
     params = {'user_login': member['user_login']}
     response = requests.get(url, headers=headers, params=params)
-    contents = json.loads(response.content)["data"]
+    contents = json.loads(response.content)      # 방송이 안켜져 있으면 ["data"][0]에서 list index out of range 에러가 나기때문에 try문 안에서 읽어줘야함.
 
     try:
-        if contents["type"] == 'live':
+        if contents["data"][0]["type"] == 'live':
             member['live'] = True
     except:
         pass
