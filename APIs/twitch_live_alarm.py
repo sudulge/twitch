@@ -158,19 +158,18 @@ while True:
                 else:
                     pass
             
-            # 방제 변경은 eventsub으로 알림 받는 중. 
-            # url = 'https://api.twitch.tv/helix/channels'
-            # params = {"broadcaster_id":  member['user_id']}
-            # response = requests.get(url, headers=headers, params=params)
-            # contents = json.loads(response.content)["data"][0]
+            url = 'https://api.twitch.tv/helix/channels'
+            params = {"broadcaster_id":  member['user_id']}
+            response = requests.get(url, headers=headers, params=params)
+            contents = json.loads(response.content)["data"][0]
 
-            # if contents["title"] != member['title']:
-            #     dic = change(member)
-            #     data = change_embed(dic, contents["title"])
-            #     member["title"] = contents["title"]
-            #     post = requests.post(url=wh_url, headers=wh_headers, json=data)
-            # else:
-            #     pass
+            if contents["title"] != member['title']:
+                dic = change(member)
+                data = change_embed(dic, contents["title"])
+                member["title"] = contents["title"]
+                post = requests.post(url=wh_url, headers=wh_headers, json=data)
+            else:
+                pass
 
     except Exception as e:
         print(e)
