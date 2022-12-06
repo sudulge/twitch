@@ -27,5 +27,4 @@ hash = sha.hexdigest()[:20]
 
 subdomains = ["d1m7jfoe9zdc1j", "d2nvs31859zcd8", "d3vd9lfkzbru3h", "dgeft87wbj63p"]
 for i in subdomains:
-    webbrowser.open(f"https://{i}.cloudfront.net/{hash}_{id}_{streamcord}_{timestamp}/chunked/index-dvr.m3u8")
-
+    webbrowser.open(f"https://{i}.cloudfront.net/{hash}_{string}/chunked/index-dvr.m3u8")

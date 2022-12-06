@@ -7,6 +7,8 @@ import random
 from pprint import pprint
 import os
 from dotenv import load_dotenv
+from datetime import datetime, timedelta
+import hashlib
 
 load_dotenv()
 
@@ -56,12 +58,31 @@ for member in members:
 
 #############################################################################################################
 
+def getm3u8(contents):
+    startime = str(contents["data"][0]["started_at"]).replace("T", " ").replace("Z", "")
+    d = datetime.strptime(startime, "%Y-%m-%d %H:%M:%S")
+    e = timedelta(hours=9)
+    f = d + e
+    timestamp = int(f.timestamp())
+    t = f.strftime("%Y_%m_%d_%H_%M_%S")
+    streamid = contents["data"][0]["id"]
+    userid = contents["data"][0]["user_login"]
+
+    string = f"{userid}_{streamid}_{timestamp}"
+    sha = hashlib.new('sha1')
+    sha.update(string.encode())
+    hash = sha.hexdigest()[:20]
+
+    m3u8 = f"https://d3vd9lfkzbru3h.cloudfront.net/{hash}_{string}/chunked/index-dvr.m3u8"
+    return m3u8, t
+
 def stream(member, contents):
-    image = f"https://static-cdn.jtvnw.net/previews-ttv/live_user_{member['user_login']}-1499x843.jpg"
+    m3u8, t = getm3u8(contents)
+    image = f"https://static-cdn.jtvnw.net/previews-ttv/live_user_{member['user_login']}-1499x843.jpg?t={t}"
     thumbnail = f"https://static-cdn.jtvnw.net/jtv_user_pictures/{member['profile']}-profile_image-300x300.png"
     link = f"https://www.twitch.tv/{member['user_login']}"
 
-    dic = {'name': member["name"], 'color': member["color"], 'title': contents["data"][0]["title"], 'content': contents["data"][0]["game_name"], 'thumbnail': thumbnail, 'image': image, 'link': link}
+    dic = {'name': member["name"], 'color': member["color"], 'title': contents["data"][0]["title"], 'content': contents["data"][0]["game_name"], 'thumbnail': thumbnail, 'image': image, 'link': link, 'm3u8': m3u8}
 
     return dic
 
@@ -76,11 +97,17 @@ def stream_embed(dic):
                     {
                         "name" : "컨텐츠",
                         "value": dic['content'],
+                        "inline": False
+                    },
+                    {
+                        "name" : "​",
+                        "value": f"[보러가기]({dic['link']})",
                         "inline": True
                     },
                     {
                         "name" : "​",
-                        "value": f"[보러가기]({dic['link']})"
+                        "value": f"[m3u8]({dic['m3u8']})",
+                        "inline": True
                     }
                 ],
                 "thumbnail" : {"url": dic['thumbnail']},
@@ -92,7 +119,7 @@ def stream_embed(dic):
 
 def change(member):
     if member['live']:
-        image = f"https://static-cdn.jtvnw.net/previews-ttv/live_user_{member['user_login']}-1499x843.jpg"
+        image = f"https://static-cdn.jtvnw.net/previews-ttv/live_user_{member['user_login']}-1499x843.jpg" + str(random.randint(1, 999999))
     else:
         image = f"https://static-cdn.jtvnw.net/jtv_user_pictures/{member['offline']}-channel_offline_image-1920x1080.png"
     thumbnail = f"https://static-cdn.jtvnw.net/jtv_user_pictures/{member['profile']}-profile_image-300x300.png"
