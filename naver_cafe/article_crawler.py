@@ -12,7 +12,7 @@ members = {
     "아이네": {'name':'아이네', 'profile':'ecd6ee59-9f18-4eec-b8f3-63cd2a9127a5', 'number':0},
     "징버거": {'name':'징버거', 'profile':'330b695d-63ec-41cb-baca-a191a7bbc441', 'number':0},
     "릴파 LILPA": {'name':'릴파', 'profile':'3b5e6d73-8935-449f-902b-1b94a386e137', 'number':0},
-    "주르르": {'name':'주르르', 'profile':'c90c5d02-5a9f-4906-a745-08ee8bf8ea18', 'number':0},
+    "주르르": {'name':'주르르', 'profile':'08e9e904-8f7c-4802-a748-fb0dcd1087bf', 'number':0},
     "고세구": {'name':'고세구', 'profile':'1e4cac72-a1cd-4f72-8ada-b2d10ac990d7', 'number':0},
     "비챤": {'name':'비챤', 'profile':'d9db10b1-f7cf-44ce-942e-0ad8f1692813', 'number':0},
 }

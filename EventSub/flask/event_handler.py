@@ -47,7 +47,7 @@ members = {
         "702754423": {'name':'아이네', 'user_id': '702754423', 'user_login': 'vo_ine', 'profile':'ecd6ee59-9f18-4eec-b8f3-63cd2a9127a5', 'color': 0x8a2be2, 'offline': 'cba3d08e-a269-43ab-9448-2d9bf88751ee', 'live': False, 'title': 'title'},
         "237570548": {'name':'징버거', 'user_id': '237570548', 'user_login': 'jingburger', 'profile':'330b695d-63ec-41cb-baca-a191a7bbc441', 'color': 0xf0a957, 'offline': 'a6d6432d-8cfb-41ee-92a8-8ff528307ca6', 'live': False, 'title': 'title'},
         "169700336": {'name':'릴파', 'user_id': '169700336', 'user_login': 'lilpaaaaaa', 'profile':'3b5e6d73-8935-449f-902b-1b94a386e137', 'color': 0x000080, 'offline': 'e5f52835-cb99-4a07-bb58-aa777209895d', 'live': False, 'title': 'title'},
-        "203667951": {'name':'주르르', 'user_id': '203667951', 'user_login': 'cotton__123', 'profile':'c90c5d02-5a9f-4906-a745-08ee8bf8ea18', 'color': 0x800080, 'offline': '92f19ffa-f0e2-49cd-9047-61754fe0f4ad', 'live': False, 'title': 'title'},
+        "203667951": {'name':'주르르', 'user_id': '203667951', 'user_login': 'cotton__123', 'profile':'08e9e904-8f7c-4802-a748-fb0dcd1087bf', 'color': 0x800080, 'offline': '92f19ffa-f0e2-49cd-9047-61754fe0f4ad', 'live': False, 'title': 'title'},
         "707328484": {'name':'고세구', 'user_id': '707328484', 'user_login': 'gosegugosegu', 'profile':'1e4cac72-a1cd-4f72-8ada-b2d10ac990d7', 'color': 0x467ec6, 'offline': '8bd8f49b-f1f7-460b-a35a-19a1800c71ee', 'live': False, 'title': 'title'},
         "195641865": {'name':'비챤', 'user_id': '195641865', 'user_login': 'viichan6', 'profile':'d9db10b1-f7cf-44ce-942e-0ad8f1692813', 'color': 0x85ac20, 'offline': '0c205a38-8331-4bc0-8796-72e37c424584', 'live': False, 'title': 'title'},
 }
