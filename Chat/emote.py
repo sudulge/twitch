@@ -73,6 +73,7 @@ emote_dict = {
     'wakSlow': '<:wakSlow:1030485128411086948>',
     'wakSon2': '<:wakSon2:1030485130369826947>',
     'wakSs': '<:wakSs:1030485131959484526>',
+
     'voineBigSukju': '<:voineBigSukju:1030484092149571625>',
     'voine9': '<a:voine9:1030484093886005409>',
     'voine99popcorn': '<:voine99popcorn:1030484095983169678>',
@@ -123,6 +124,7 @@ emote_dict = {
     'voineSwing': '<a:voineSwing:1030484224555364483>',
     'voineUu': '<:voineUu:1030484226270842900>',
     'voineYEAH': '<:voineYEAH:1030484228036624414>',
+
     'jingbuBlackluv': '<:jingbuBlackluv:1030484387386630162>',
     'jingbu9': '<:jingbu9:1030484389286641684>',
     'jingbuBad1': '<:jingbuBad1:1030484391291535400>',
@@ -191,6 +193,7 @@ emote_dict = {
     'jingbuYamero': '<:jingbuYamero:1030485502031306854>',
     'jingbuYess': '<:jingbuYess:1030485503725797377>',
     'jingbuYummy': '<:jingbuYummy:1030485505697128468>',
+
     'lilpaaCheer2': '<a:lilpaaCheer2:1030484636817702974>',
     'lilpaa0': '<:lilpaa0:1030484639426551891>',
     'lilpaa1': '<:lilpaa1:1030484642811355146>',
@@ -246,6 +249,7 @@ emote_dict = {
     'lilpaaSudun': '<:lilpaaSudun:1030485604007432212>',
     'lilpaaWooung': '<:lilpaaWooung:1030485606121345085>',
     'lilpaaYourpointJJuldura': '<:lilpaaYourpointJJuldura:1030485607820050542>',
+
     'cotton87002': '<:cotton87002:1030485840192864297>',
     'cotton8AEruru': '<:cotton8AEruru:1030485841899945984>',
     'cotton8Ak': '<:cotton8Ak:1030485843527335956>',
@@ -294,6 +298,13 @@ emote_dict = {
     'cotton811': '<:cotton811:1030485926889127986>',
     'cotton822': '<:cotton822:1030485928394903625>',
     'cotton833': '<:cotton833:1030485930575921202>',
+    'cotton8Heart3':'<:cotton8Heart3:1065650406849515681>',
+    'cotton8Hi3':'<:cotton8Hi3:1065650413946278059>',
+    'cotton8Kimo':'<:cotton8Kimo:1065650415615610880>',
+    'cotton8Porihi':'<:cotton8Porihi:1065650418593566770>',
+    'cotton8Punch':'<:cotton8Punch:1065650421965783130>',
+    'cotton8Run':'<:cotton8Run:1065650423228268586>',
+
     'seguTprnqla2': '<:seguTprnqla2:1030486018467573835>',
     'seguAnfdmavyrn': '<:seguAnfdmavyrn:1030486019985907784>',
     'seguChingul1': '<:seguChingul1:1030486021898510387>',
@@ -352,6 +363,7 @@ emote_dict = {
     'seguZlzlrrn': '<:seguZlzlrrn:1030486356675285074>',
     'seguZzack': '<:seguZzack:1030486359082803231>',
     'seguZzangsegu': '<a:seguZzangsegu:1030486362585038949>',
+
     'viichanS': '<:viichanS:1030486419824713839>',
     'viichanTo': '<:viichanTo:1030486421565362336>',
     'viichanAir': '<:viichanAir:1030486423163392061>',
