@@ -422,6 +422,7 @@ emote_dict = {
     'viichanUu': '<:viichanUu:1030486555439149056>',
     'viichanW': '<:viichanW:1030486557322391572>',
     'viichanZzz': '<:viichanZzz:1030486558907830363>',
+    'viichanGg': '<:viichanGg:1080479542650613810>',
 }
 
 members = {
