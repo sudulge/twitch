@@ -1,3 +1,5 @@
 .env
 APIs/twitch_api_test.py
 APIs/twitch_token.py
+__pycache__/
+Chat/__pycache__/
