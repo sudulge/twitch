@@ -4,6 +4,7 @@ import re
 import requests
 from emote import emote_dict, members
 import os
+from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -24,7 +25,7 @@ async def connect():
     
     async for websocket in websockets.connect(ws_url):
         try:
-            print('Server connect...')
+            print(f'{datetime.now()} Server connect...')
             await websocket.send('CAP REQ :twitch.tv/membership twitch.tv/tags twitch.tv/commands')
             await websocket.send(f'PASS oauth:{os.getenv("twitch_user_access_token").replace("Bearer ","")}')
             await websocket.send(f'NICK {os.getenv("twitch_id")}')
@@ -51,7 +52,7 @@ async def connect():
                     pass
 
         except websockets.ConnectionClosed:
-            print('Server Disconnect...')
+            print(f'{datetime.now()} Server Disconnect...')
             continue
 
 async def sendwh(user_id, room_id, chat):
