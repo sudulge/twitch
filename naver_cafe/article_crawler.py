@@ -19,7 +19,7 @@ members = {
 }
 
 for member in members:
-    url = f"http://127.0.0.1:80/isedol/{members[member]['user_id']}"
+    url = f"http://127.0.0.1:5000/isedol/{members[member]['user_id']}"
     response = requests.get(url=url)
     contents = json.loads(response.content)
 
