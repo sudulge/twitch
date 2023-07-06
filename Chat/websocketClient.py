@@ -2,12 +2,31 @@ import websockets
 import asyncio
 import re
 import requests
-from emote import emote_dict, members
+from emote import emote_dict
 import os
+import json
 from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
+
+members = {
+    "49045679": {'name':'우왁굳', 'user_id': '49045679', 'user_login': 'woowakgood', 'profile':'', 'offline': '', 'color': 0x164532, 'live': False, 'title': 'title'},
+    "702754423": {'name':'아이네', 'user_id': '702754423', 'user_login': 'vo_ine', 'profile':'', 'offline': '', 'color': 0x8a2be2, 'live': False, 'title': 'title'},
+    "237570548": {'name':'징버거', 'user_id': '237570548', 'user_login': 'jingburger', 'profile':'', 'offline': '', 'color': 0xf0a957, 'live': False, 'title': 'title'},
+    "169700336": {'name':'릴파', 'user_id': '169700336', 'user_login': 'lilpaaaaaa', 'profile':'', 'offline': '', 'color': 0x000080, 'live': False, 'title': 'title'},
+    "203667951": {'name':'주르르', 'user_id': '203667951', 'user_login': 'cotton__123', 'profile':'', 'offline': '', 'color': 0x800080, 'live': False, 'title': 'title'},
+    "707328484": {'name':'고세구', 'user_id': '707328484', 'user_login': 'gosegugosegu', 'profile':'', 'offline': '', 'color': 0x467ec6, 'live': False, 'title': 'title'},
+    "195641865": {'name':'비챤', 'user_id': '195641865', 'user_login': 'viichan6', 'profile':'', 'offline': '', 'color': 0x85ac20, 'live': False, 'title': 'title'},
+}
+
+for member in members:
+    url = f"http://127.0.0.1:5000/isedol/{member}"
+    response = requests.get(url=url)
+    contents = json.loads(response.content)
+
+    members[member]['profile'] = contents['profile']
+    members[member]['offline'] = contents['offline']
 
 ws_url = 'ws://irc-ws.chat.twitch.tv:80'
 wh_url = os.getenv("discord_twitch_webhook_url")

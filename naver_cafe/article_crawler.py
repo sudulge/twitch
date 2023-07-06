@@ -25,8 +25,6 @@ for member in members:
 
     members[member]['profile'] = contents['profile']
 
-print(members)
-
 cafe_url = 'https://cafe.naver.com/ArticleList.nhn?search.clubid=27842958&search.menuid=345&search.boardtype=L'
 wh_url = os.getenv("discord_twitch_webhook_url")
 headers = {
