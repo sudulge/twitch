@@ -39,11 +39,12 @@ for member in members:
     url = f"http://127.0.0.1:5000/isedol/{member['user_id']}"
     response = requests.get(url=url)
     contents = json.loads(response.content)
-    members[member]['profile'] = contents['profile']
+    member['profile'] = contents['profile']
 
     lastArticle = getLastArticle(member['cafe_key'])
     lastArticle_id = lastArticle['articleid']
     member['lastArticle_id'] = lastArticle_id
+    print(f"{member['name']}: {lastArticle['subject']}")
 
 
 while True:
