@@ -76,7 +76,6 @@ while True:
                 data = {
                     "username": member['name'],
                     "avatar_url": f"https://static-cdn.jtvnw.net/jtv_user_pictures/{member['profile']}-profile_image-300x300.png",
-                    "content": f"https://cafe.naver.com/steamindiegame/{lastArticle_id}",
                     "embeds": [
                         {
                             "author": {
@@ -84,9 +83,14 @@ while True:
                             },
                             "title": lastArticle['subject'],
                             "url": f"https://cafe.naver.com/steamindiegame/{lastArticle_id}",
-                            "description": content,
                             "color": member['color'],
-                            "image": {"url": img_url}
+                            "image": {"url": img_url},
+                            "fields": [
+                                {
+                                    "name" : "",
+                                    "value": content
+                                }
+                            ]
                         }
                     ],
                 }
