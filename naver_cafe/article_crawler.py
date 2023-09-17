@@ -61,10 +61,7 @@ while True:
                 soup = BeautifulSoup(json.loads(response.content)['result']['article']['contentHtml'], 'html.parser')
                 
                 if soup.find('img'):
-                    if soup.find('img')['src'].startswith('https://cafeptthumb'):
-                        img_url = soup.find('img')['src']
-                    else:
-                        img_url = None
+                    img_url = soup.find('img')['src']
                 else:
                     img_url = None
 
