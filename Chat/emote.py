@@ -498,4 +498,5 @@ emote_dict = {
     'viichanCd': '<:viichanCd:1132016288261226599>',
     'viichanSanha': '<:viichanSanha:1132016290089943072>',
     'viichanBabo': '<:viichanBabo:1132016184338960405>',
+    'viichanSs': '<:viichanSs:1170798194133831863>',
 }
